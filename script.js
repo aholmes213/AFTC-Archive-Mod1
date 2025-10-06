@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	const defJK = document.getElementById('defJK');
 	
 	linkJK.addEventListener('click', () => {
-		slideSeven.classList.add('jk');
+		slideSeven.style.transform = 'scale(3) translate(-175px, -100px)';
 		txtJK.classList.add('active');
 		defJK.classList.add('active');
 	});
