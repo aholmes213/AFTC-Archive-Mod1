@@ -196,12 +196,41 @@ document.addEventListener('DOMContentLoaded', function() {
 	const txtJP = document.getElementById('jp');
 	const txtJE = document.getElementById('je');
 	const defJK = document.getElementById('defJK');
+	const btnReturn = document.getElementById('btnReturn');
 	
+	linkJK.addEventListener('click', () => {
+		slideSeven.classList.add('jk');
+		txtJK.classList.add('active');
+		defJK.classList.add('active');
+		btnReturn.classList.add('active');
+		guiBlocked.classList.add('active');
+		linkJK.classList.add('active');
+	});
+	linkJP.addEventListener('click', () => {
+		slideSeven.classList.add('jp');
+		txtJK.classList.add('active');
+		defJK.classList.add('active');
+		btnReturn.classList.add('active');
+		guiBlocked.classList.add('active');
+		linkJK.classList.add('active');
+	});
 	linkJK.addEventListener('click', () => {
 		slideSeven.style.transform = 'scale(3) translate(-175px, -100px)';
 		txtJK.classList.add('active');
 		defJK.classList.add('active');
+		btnReturn.classList.add('active');
+		guiBlocked.classList.add('active');
+		linkJK.classList.add('active');
 	});
-
+	btnReturn.addEventListener('click', () => {
+		slideSeven.classList.remove('jk');
+		slideSeven.classList.remove('jp');
+		slideSeven.classList.remove('je');
+		txtJK.classList.remove('active');
+		defJK.classList.remove('active');
+		btnReturn.classList.remove('active');
+		guiBlocked.classList.remove('active');
+		linkJK.classList.remove('active');
+	});
 });
 

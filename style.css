@@ -86,13 +86,22 @@ button:active{
 	color: white;
 	width: 50px;
 	height: 50px;
-	postion: absolute;
+	position: absolute;
+	top: -650px;
+	left:900px;
+	cursor: pointer;
+	display: none;
+	transition: .5s ease;
 }
 .guiIcon span{
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
 	font-size: 50px;
+
+}
+.guiIcon.active {
+	display: inline;
 }
 .canvas {
   width: 1200px;
@@ -542,7 +551,11 @@ img {
 	left: 79px
 }
 .slideSeven.jk {
-	transform: scale(3) translate(-175px, 200px) translateY(-100%);
+	transform: scale(3) translate(-175px, -100px);
+	transition: transform 1s ease;
+}
+.slideSeven.jp {
+	transform: scale(3) translate(175px, -500px);
 	transition: transform 1s ease;
 }
 #defJK, #defJP, #defJE {
@@ -571,5 +584,7 @@ img {
 #defJK.active, #defJP.active, #defJE.active {
 	opacity:1;
 }
-
+.slide7lkKnowledge.active, .slide7lkProficiency.active, .slide7lkExp.active {
+	pointer-events: none;
+}
 
