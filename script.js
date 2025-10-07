@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		slideThree: './assets/slide3_Audio.m4a',
 		slideFour: './assets/slide4_Audio.wav',
 		slideFive: './assets/slide5_Audio.wav',
-		slideSix: './assets/slide6_Audio.wav'
-		
+		slideSix: './assets/slide6_Audio.wav',
+		slideSeven: './assets/slide7_Audio.wav'
 	}
 	
 	function playSlideAudio(filePath) {
@@ -205,32 +205,49 @@ document.addEventListener('DOMContentLoaded', function() {
 		btnReturn.classList.add('active');
 		guiBlocked.classList.add('active');
 		linkJK.classList.add('active');
+
+		playAudio('./assets/slide7_jk.wav');
 	});
 	linkJP.addEventListener('click', () => {
 		slideSeven.classList.add('jp');
-		txtJK.classList.add('active');
-		defJK.classList.add('active');
+		txtJP.classList.add('active');
+		defJP.classList.add('active');
 		btnReturn.classList.add('active');
 		guiBlocked.classList.add('active');
-		linkJK.classList.add('active');
+		linkJP.classList.add('active');
+
+		playAudio('./assets/slide7_jp.wav');
 	});
-	linkJK.addEventListener('click', () => {
-		slideSeven.style.transform = 'scale(3) translate(-175px, -100px)';
-		txtJK.classList.add('active');
-		defJK.classList.add('active');
+	linkJE.addEventListener('click', () => {
+		slideSeven.classList.add('je');
+		txtJE.classList.add('active');
+		defJE.classList.add('active');
 		btnReturn.classList.add('active');
 		guiBlocked.classList.add('active');
-		linkJK.classList.add('active');
+		linkJE.classList.add('active');
+
+		playAudio('./assets/slide7_jk.wav');
+
 	});
 	btnReturn.addEventListener('click', () => {
+		slideSeven.style.transform = '';
 		slideSeven.classList.remove('jk');
 		slideSeven.classList.remove('jp');
 		slideSeven.classList.remove('je');
 		txtJK.classList.remove('active');
 		defJK.classList.remove('active');
+		txtJE.classList.remove('active');
+		defJE.classList.remove('active');
+		txtJP.classList.remove('active');
+		defJP.classList.remove('active');
 		btnReturn.classList.remove('active');
 		guiBlocked.classList.remove('active');
 		linkJK.classList.remove('active');
+		linkJP.classList.remove('active');
+		linkJE.classList.remove('active');
+
+		playAudio('./assets/slide7_transition.wav');
+
 	});
 });
 

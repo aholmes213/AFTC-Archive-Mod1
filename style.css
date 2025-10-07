@@ -533,22 +533,24 @@ img {
 	font-family: Garamond, serif;
 	font-size: 38px;
 	position: absolute;
+	transition: transform 2s ease 1s;
 }
 #jk {
 	top: 163px;
 	left: 454px;
-	transition: transform 2s ease 1s;
 }
 #jk.active, #jp.active, #je.active  {
-	transform: scale(.4) translateY(-150px)
+	transform: scale(.4) translateY(-150px);
+	transition: transform 2s ease 1s;
+
 }
 #je {
 	top: 537px;
-	left: 456px
+	left: 456px;
 }
 #jp {
 	top: 537px;
-	left: 79px
+	left: 79px;
 }
 .slideSeven.jk {
 	transform: scale(3) translate(-175px, -100px);
@@ -556,6 +558,10 @@ img {
 }
 .slideSeven.jp {
 	transform: scale(3) translate(175px, -500px);
+	transition: transform 1s ease;
+}
+.slideSeven.je {
+	transform: scale(3) translate(-175px, -500px);
 	transition: transform 1s ease;
 }
 #defJK, #defJP, #defJE {
